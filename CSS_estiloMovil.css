@@ -1,0 +1,218 @@
+@media screen and (max-width: 768px) {
+    /* Ajustes generales */
+    body {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        background-size: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+        #fullscreen-table {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: white;
+            z-index: 1000;
+            display: none;
+            overflow-x: auto;
+            transform: rotate(90deg); /* Rota la tabla */
+            transform-origin: center center;
+        }
+    
+        #fullscreen-table.active {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        /* ENCABEZADO EN UNA SOLA LÍNEA */
+        #main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: radial-gradient(circle, #4e4339, #1a1615);
+            color: white;
+        }
+    
+        #logo-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        /* ICONO DEL MENÚ */
+        .menu-item {
+            position: relative;
+            display: inline-block;
+        }
+    
+        .menu-item img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+    
+        /* SUBMENÚ OCULTO POR DEFECTO */
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background: white;
+            width: 150px;
+            padding: 10px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+    
+        .submenu li {
+            list-style: none;
+            text-align: left;
+        }
+    
+        .submenu li a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+    
+        .submenu li a:hover {
+            background: #007BFF;
+            color: white;
+        }
+    
+        /* MOSTRAR MENÚ CUANDO SE ACTIVA */
+        .menu-item.active .submenu {
+            display: block;
+        }
+    }
+    
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+
+    nav ul li a {
+        padding: 5px;
+        color: white;
+        text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+        details summary p {
+            font-size: 16px; /* Reducir tamaño de texto en pantallas pequeñas */
+        }
+
+        .opcnEleccion label {
+            font-size: 14px; /* Reducir el tamaño de la fuente para móviles */
+        }
+
+        /* Establecer un ancho máximo para el contenedor para evitar desbordamientos */
+        .eleccion {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .seccion_inicio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centra los elementos */
+            gap: 10px; /* Espacio entre elementos */
+        }
+    
+        .seccion_inicio .inicio {
+            width: 35%; /* Cada uno ocupa el 45% del ancho */
+            display: flex;
+            justify-content: center;
+        }
+    
+        .seccion_inicio .inicio img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    
+
+    /* SECCIÓN DE EJERCICIOS */
+    .secciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+    }
+
+    .ejercicio {
+        width: 80%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        background-color: rgba(223, 223, 223, 0.952);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ejercicio img {
+        width: 110px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    .formulario select,
+    .formulario input {
+        width: 100%;
+        margin: 3px 0;
+        padding: 5px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 5px;
+    }
+
+    /* TABLA DESPLAZABLE */
+    .container {
+        width: 70%;
+        overflow-x: auto;
+        padding: 30px;
+    }
+
+    .titulo_pectoral {
+        display: none;
+    }
+
+    #tablaResultados {
+        width: 100%;
+        min-width: 600px; /* Para permitir el desplazamiento horizontal */
+        border-collapse: collapse;
+    }
+
+    #tablaResultados th,
+    #tablaResultados td {
+        padding: 5px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    #tablaResultados th {
+        background: radial-gradient(circle, #6a6d64, #585354);
+        color: white;
+    }
+}

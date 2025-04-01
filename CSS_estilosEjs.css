@@ -1,0 +1,227 @@
+/* Sección de ejercicios en columna */
+.secciones {
+  display: flex;
+  justify-content: center;  /* Centra las tarjetas en la pantalla */
+  align-items: start; 
+  gap: 20px;                /* Espaciado entre tarjetas */
+  flex-wrap: wrap;          /* Permite que se acomoden si no caben en la fila */
+  padding: 20px;            /* Espacio alrededor del contenedor */
+}
+
+/* ======== ESTILO PARA LA ELECCIÓN DE EJERCICIOS ======== */
+.eleccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  width: 10cm;
+  background: rgba(223, 223, 223, 0.952);
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.opcnEleccion {
+  margin: 8px 0;
+}
+
+.opcnEleccion:hover {
+  transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+
+.opcnEleccion label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; /* Espaciado entre la casilla y el texto */
+}
+
+/* ======== ESTILO PARA LOS DIV DE LOS EJERCICIOS ======== */
+.ejercicio {
+  background-color: rgba(223, 223, 223, 0.952);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.334);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin: 15px;
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 5px;
+  gap: 10px; 
+  display: none;
+}
+
+.ejercicio:hover {
+  transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+
+.textoEj {    /* Textos de los ejercicios */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* Espaciado entre elementos */
+  padding: 10px;
+  background: #f9f9f9; 
+  border-radius: 10px;
+  width: 200 px;
+  margin: auto; /* Centrado en la página */
+}
+
+.ejercicio img {    /* Ajustes de la imagen */
+  width: 200px; 
+  height: auto; 
+  background-color: rgba(223, 223, 223, 0.44);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.334);
+  border-radius: 10px;
+  border: 1px solid #8e8e8e;
+}
+
+.gif {
+  filter: grayscale(10%) brightness(80%);
+  transition: filter 0.3s;
+}
+
+.gif:hover {
+  filter: grayscale(0%) brightness(100%);
+}
+
+.gif.color {
+  filter: grayscale(0%) brightness(100%);
+}
+
+/* ======== ESTILO PARA LOS DESPLEGABLES ======== */
+details {
+  position: static; /* Permite que el contenido se posicione dentro del contenedor */
+  width: 100%;
+}
+
+details[open] {
+  position: static;
+  width: 100%;
+}
+
+summary {
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+details summary {
+  list-style: none; /* Elimina la viñeta */
+  appearance: none; /* Oculta la flecha en navegadores compatibles */
+  -webkit-appearance: none; /* Para navegadores WebKit (Safari, Chrome) */
+  -moz-appearance: none; /* Para navegadores Mozilla (Firefox) */
+}
+
+
+@keyframes slideFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-15px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* ======== ESTILO PARA LOS FORMULARIOS ======== */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* Espaciado entre elementos */
+  padding: 10px;
+  background: #f9f9f9; 
+  border-radius: 10px;
+  width: 200 px;
+  margin: auto; /* Centrado en la página */
+}
+
+.formulario div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.fila, select, input {
+  padding: 4px;
+  border: 0.5px solid #a39e9ee3;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  width: 2.5cm;
+}
+
+.btn {
+  background: radial-gradient(circle, #6a6d64, #585354);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #958b8d;
+}
+
+/* ======== ESTILO PARA LAS TABLAS ======== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  width: 1200px;
+  background: rgba(223, 223, 223, 0.952);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {     /* Estilos de la tabla */
+  margin: auto;
+  border-collapse: collapse;
+  max-width: 1000px;
+}
+
+th, td {    /* Estilos para las celdas de la tabla */
+  padding: 10px;
+  border: 1px solid #3a3a3a;
+  text-align: center;
+}
+
+th {    /* Estilos de la cabecera de la tabla */
+  background: radial-gradient(circle, #6a6d64, #585354);
+  color: white;
+}
+
+tr:nth-child(even) {    /* Estilos para filas pares de la tabla */
+  background: #f9f9f9;
+}
+
+/* ======== ESTILO PARA LOS BOTONES ======== */
+button {
+  background: rgb(148, 0, 0);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: rgb(213, 0, 0);
+}
+
+

@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url(fondo.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.seccion_inicio {
+    display: flex;
+    justify-content: center;  /* Centra las tarjetas en la pantalla */
+    align-items: start; 
+    gap: 20px;                /* Espaciado entre tarjetas */
+    flex-wrap: wrap;          /* Permite que se acomoden si no caben en la fila */
+    padding: 20px;            /* Espacio alrededor del contenedor */
+  }
+
+#main-header {
+    background: radial-gradient(circle, #4e4339, #1a1615);
+    color: white;
+    height: 80px;
+}
+
+#main-header a {
+    color: white;
+}
+
+#logo-header {
+    float: left;
+    padding: 15px 0 0 20px;
+    text-decoration: none;
+}
+
+#logo-header:hover {
+    color: #0b76a6;
+}
+
+#logo-header .site-name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+#logo-header .site-desc {
+    display: block;
+    font-weight: 300;
+    font-size: 0.8em;
+    color: #dfdfdf;
+}
+
+/* ======== ESTILO PARA LA BARRA DE NAVEGACIÓN ======== */
+nav {
+    float: right;
+    margin-top: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 40px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: #0b76a6;
+}
+
+.titulosDiv {
+    columns: 2;
+    margin-top: 0;
+    background-color: #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.334);
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-item a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.menu-item:hover a {
+    background-color: #444;
+}
+
+.submenu a:hover {
+    background-color: #666;
+}
+
+.inicio {
+    background-color: rgba(223, 223, 223, 0.952);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.334);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 15px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 5px;
+    gap: 10px; 
+  }
+
+  .inicio span {
+    font-size: 12px;
+    color: rgb(101, 101, 101);
+}
+  
+  .inicio:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+  }
+
+.inicio img {    /* Ajustes de la imagen */
+    width: 125px; 
+    height: auto; 
+    background-color: rgba(223, 223, 223, 0.44);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.334);
+    border-radius: 10px;
+    border: 1px solid #8e8e8e;
+}
